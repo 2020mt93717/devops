@@ -1,11 +1,11 @@
-node('test'){
-stage('stage1') {
-sh '''echo  stage1 steps'''
+pipeline {
+stage('Build') {
+sh '''echo  Build steps'''
 }
-stage('stage2') {
-sh '''echo stage2 steps'''
+stage('Test') {
+sh '''echo Test steps'''
 }
-stage('stage3') {
-sh '''echo stage3 steps'''
+stage('Deploy') {
+sh '''echo Deploy steps'''
 }
 }
