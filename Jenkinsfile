@@ -48,7 +48,7 @@ pipeline {
     stage('Deploy - Staging') {
 
       steps {
-        sh 'cp target/jenkins-0.0.1-SNAPSHOT.war ${env.CATALINA_HOME}/webapps/'
+        sh "cp target/jenkins-0.0.1-SNAPSHOT.war ${env.CATALINA_HOME}/webapps/"
         sh 'chmod +x /target/test-classes/scripts/run_smoke_test.sh'
         sh './target/test-classes/scripts/run_smoke_test.sh'
       }
