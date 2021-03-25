@@ -1,0 +1,1 @@
+echo running smoke test
