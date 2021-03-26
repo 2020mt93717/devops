@@ -49,8 +49,8 @@ pipeline {
 
       steps {
         sh "cp target/jenkins-0.0.1-SNAPSHOT.war ${env.CATALINA_HOME}/webapps/"
-        sh 'chmod +x target/test-classes/scripts/run_smoke_test.sh'
-        sh './target/test-classes/scripts/run_smoke_test.sh'
+        sh 'chmod +x target/test-classes/scripts/run_acceptance_test.sh'
+        sh "./target/test-classes/scripts/run_acceptance_test.sh -h ${env.CATALINA_URL} -a jenkins-0.0.1-SNAPSHOT"
       }
     }
 
