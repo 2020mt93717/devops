@@ -54,7 +54,7 @@ pipeline {
 
       steps {
       
-        sh "cp target/DevOpsCICD.war ${env.CATALINA_HOME}/webapps/"
+        sh "cp target/DevOpsCICD.war ${env.STAGE_CATALINA_HOME}/webapps/"
         
       }
     }
@@ -64,9 +64,9 @@ pipeline {
     
       steps {
         
-        echo "Waiting ${env.CATALINA_DEPLOY_WAIT_TIME} seconds for deployment to complete prior to starting automated testing"
+        echo "Waiting ${env.DEPLOY_WAIT_TIME} seconds for deployment to complete prior to starting automated testing"
         
-        sleep "${env.CATALINA_DEPLOY_WAIT_TIME}" // seconds
+        sleep "${env.DEPLOY_WAIT_TIME}" // seconds
         
        }
     }
@@ -78,7 +78,7 @@ pipeline {
       
         sh 'chmod +x target/test-classes/scripts/run_acceptance_test.sh'
         
-        sh "./target/test-classes/scripts/run_acceptance_test.sh -h ${env.CATALINA_URL} -a DevOpsCICD"
+        sh "./target/test-classes/scripts/run_acceptance_test.sh -h ${env.STAGE_CATALINA_URL} -a DevOpsCICD"
         
       }
     }
@@ -88,7 +88,7 @@ pipeline {
 
       steps {
 
-        input "Test ${env.CATALINA_URL}/DevOpsCICD URL. Does the staging environment look ok?"
+        input "Test ${env.STAGE_CATALINA_URL}/DevOpsCICD URL. Does the staging environment look ok?"
 
       }
     }
@@ -102,7 +102,7 @@ pipeline {
         
         sshagent(['AWS_EC2_Prod_Key']) {
         
-          sh "scp -o StrictHostKeyChecking=no target/DevOpsCICD.war  ec2-user@35.154.130.100:/opt/apache-tomcat-8.5.64/webapps/"            
+          sh "scp -o StrictHostKeyChecking=no target/DevOpsCICD.war ${PROD_CATALINA_HOME}/webapps/"            
         }
 
         /*sh './deploy production'*/
@@ -114,11 +114,24 @@ pipeline {
     
       steps {
         
-        echo "Waiting ${env.CATALINA_DEPLOY_WAIT_TIME} seconds for deployment to complete prior to starting automated testing"
+        echo "Waiting ${env.DEPLOY_WAIT_TIME} seconds for deployment to complete prior to starting automated testing"
         
-        sleep "${env.CATALINA_DEPLOY_WAIT_TIME}" // seconds
+        sleep "${env.DEPLOY_WAIT_TIME}" // seconds
         
        }
+    }
+    
+
+    /* 9. Run automated acceptance testing on tomcat production server */
+    stage('Automated Acceptance Test - Production') {
+
+      steps {
+      
+        sh 'chmod +x target/test-classes/scripts/run_acceptance_test.sh'
+        
+        sh "./target/test-classes/scripts/run_acceptance_test.sh -h ${env.PROD_CATALINA_URL} -a DevOpsCICD"
+        
+      }
     }
     
   }
