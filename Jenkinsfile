@@ -66,7 +66,7 @@ pipeline {
         
         echo "Waiting ${env.CATALINA_DEPLOY_WAIT_TIME} seconds for deployment to complete prior to starting automated testing"
         
-        sleep ${env.CATALINA_DEPLOY_WAIT_TIME} // seconds
+        sleep "${env.CATALINA_DEPLOY_WAIT_TIME}" // seconds
         
        }
     }
