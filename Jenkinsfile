@@ -58,17 +58,27 @@ pipeline {
     
     /* 4. Wait for predefined time. This is needed so that tomcat can deploy the war */
     stage ("Wait Prior to Running Automated Test") {
-       def time = ${env.CATALINA_DEPLOY_WAIT_TIME}
-       echo "Waiting ${env.CATALINA_DEPLOY_WAIT_TIME} seconds for deployment to complete prior to starting automated testing"
-       sleep time.toInteger() // seconds
+    
+      steps {
+      
+        def time = ${env.CATALINA_DEPLOY_WAIT_TIME}
+        
+        echo "Waiting ${env.CATALINA_DEPLOY_WAIT_TIME} seconds for deployment to complete prior to starting automated testing"
+        
+        sleep time.toInteger() // seconds
+        
+       }
     }
 
     /* 5. Run automated acceptance testing on tomcat staging server */
     stage('Automated Acceptance Test - Staging') {
 
       steps {
+      
         sh 'chmod +x target/test-classes/scripts/run_acceptance_test.sh'
+        
         sh "./target/test-classes/scripts/run_acceptance_test.sh -h ${env.CATALINA_URL} -a jenkins-0.0.1-SNAPSHOT"
+        
       }
     }
     
