@@ -60,7 +60,7 @@ pipeline {
     }
     
     /* 4. Wait for predefined time. This is needed so that tomcat can deploy the war */
-    stage ("Wait Prior to Running Automated Test") {
+    stage ("Wait Prior to Running Automated Test - Stage") {
     
       steps {
         
@@ -110,7 +110,7 @@ pipeline {
     }
     
     /* 8. Wait for predefined time. This is needed so that tomcat can deploy the war */
-    stage ("Wait Prior to Running Automated Test") {
+    stage ("Wait Prior to Running Automated Test - Production") {
     
       steps {
         
