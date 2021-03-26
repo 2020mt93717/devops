@@ -2,7 +2,10 @@ pipeline {
 
   /* Configure this pipeline to run in slave node*/
   agent {
-    label 'slave'
+    node {
+       label 'slave'
+       customWorkspace "${env.JOB_WORKSPACE}"
+    }
   }
 
   /* Pipeline stages
@@ -60,12 +63,10 @@ pipeline {
     stage ("Wait Prior to Running Automated Test") {
     
       steps {
-      
-        def time = ${env.CATALINA_DEPLOY_WAIT_TIME}
         
         echo "Waiting ${env.CATALINA_DEPLOY_WAIT_TIME} seconds for deployment to complete prior to starting automated testing"
         
-        sleep time.toInteger() // seconds
+        sleep ${env.CATALINA_DEPLOY_WAIT_TIME} // seconds
         
        }
     }
