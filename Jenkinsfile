@@ -98,10 +98,29 @@ pipeline {
 
       steps {
 
-        sh '''echo deploy to production'''
+        sh '''echo deploy to production EC2 Tomcat'''
+        
+        sshagent(['AWS_EC2_Prod_Key']) {
+        
+          sh "scp -o StrictHostKeyChecking=no target/DevOpsCICD.war  ec2-user@35.154.130.100:/opt/apache-tomcat-8.5.64/webapps/"            
+        }
+
         /*sh './deploy production'*/
       }
     }
+    
+    /* 8. Wait for predefined time. This is needed so that tomcat can deploy the war */
+    stage ("Wait Prior to Running Automated Test") {
+    
+      steps {
+        
+        echo "Waiting ${env.CATALINA_DEPLOY_WAIT_TIME} seconds for deployment to complete prior to starting automated testing"
+        
+        sleep "${env.CATALINA_DEPLOY_WAIT_TIME}" // seconds
+        
+       }
+    }
+    
   }
 
   post {
