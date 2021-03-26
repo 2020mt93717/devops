@@ -106,19 +106,25 @@ pipeline {
 
   post {
     success {
+      sh "echo Sending Mail Sent Build is Successful"
       mail to: '2020mt93717@wilp.bits-pilani.ac.in',
         subject: "Success Pipeline: ${currentBuild.fullDisplayName}",
         body: "Good with ${env.BUILD_URL}"
+      sh "echo Mail Sent To 2020mt93717@wilp.bits-pilani.ac.in"
     }
     unstable {
+        sh "echo Sending Mail Sent Build is Unstable"
       mail to: '2020mt93717@wilp.bits-pilani.ac.in',
         subject: "Unstable Pipeline: ${currentBuild.fullDisplayName}",
         body: "Unstable with ${env.BUILD_URL}"
+      sh "echo Mail Sent To 2020mt93717@wilp.bits-pilani.ac.in"
     }
     failure {
+       sh "echo Sending Mail Sent Build Failed"
       mail to: '2020mt93717@wilp.bits-pilani.ac.in',
         subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
         body: "Something is wrong with ${env.BUILD_URL}"
+      sh "echo Mail Sent To 2020mt93717@wilp.bits-pilani.ac.in"
     }
   }
 }
