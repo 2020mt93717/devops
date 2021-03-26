@@ -54,7 +54,7 @@ pipeline {
 
       steps {
       
-        sh "cp target/jenkins-0.0.1-SNAPSHOT.war ${env.CATALINA_HOME}/webapps/"
+        sh "cp target/DevOpsCICD.war ${env.CATALINA_HOME}/webapps/"
         
       }
     }
@@ -78,7 +78,7 @@ pipeline {
       
         sh 'chmod +x target/test-classes/scripts/run_acceptance_test.sh'
         
-        sh "./target/test-classes/scripts/run_acceptance_test.sh -h ${env.CATALINA_URL} -a jenkins-0.0.1-SNAPSHOT"
+        sh "./target/test-classes/scripts/run_acceptance_test.sh -h ${env.CATALINA_URL} -a DevOpsCICD"
         
       }
     }
@@ -88,7 +88,7 @@ pipeline {
 
       steps {
 
-        input "Test ${env.CATALINA_URL}/jenkins-0.0.1-SNAPSHOT URL. Does the staging environment look ok?"
+        input "Test ${env.CATALINA_URL}/DevOpsCICD URL. Does the staging environment look ok?"
 
       }
     }
