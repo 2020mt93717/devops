@@ -23,5 +23,7 @@
 #### Code Mode 👨🏽‍💻
 - [Jai Kartik](https://github.com/2020mt93717)
 - [Karna P Singh](https://2020mt93650.github.io/2020mt93650/)
+- [SOMA SUNDARAM P] (2020mt93565@wilp.bits-pilani.ac.in)
+- [Abhinandan R] (2020mt93627@wilp.bits-pilani.ac.in)
 
 
