@@ -27,4 +27,9 @@ public class SampleUnitTest extends TestCase{
         return null;
         
     }
+    @Test
+    public String subTestResult(){
+        return null;
+        
+    }    
 }
