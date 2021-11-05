@@ -7,9 +7,6 @@
 
 <i>This was initially setup for devops assignment. Now its used for OSSE Assignment 4</i>
 
-
-<img alt="OSSE Assignment 4" src="assets/agpr.gif"> </img>
-
 <i>Loved the project? Please consider [donating] to help it improve!</i>
 
 </div>
@@ -18,6 +15,7 @@
   - [Contributors](#contributors)
     
 ### Contributors 👨🏽‍💻
+
 |Name|Email|
 |----|-------|
 |[Jaikartik N](https://2020mt93717.github.io)|2020mt93717@wilp.bits-pilani.ac.in|
