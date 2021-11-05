@@ -18,7 +18,7 @@
   - [Contributors](#contributors)
     
 ### Contributors 👨🏽‍💻
-|Name| Email|
+|Name|Email|
 |----|-------|
 |[Jaikartik N](https://2020mt93717.github.io) | 2020mt93717@wilp.bits-pilani.ac.in |
 |[Karna P Singh](https://2020mt93650.github.io/2020mt93650/) | 2020mt93650@wilp.bits-pilani.ac.in |
