@@ -1,11 +1,10 @@
 
 
-<h1 align="center">OSSE Assignment 4
-<a href="https://github.com/2020mt93717/devops" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=277987&theme=light" alt="OSSE Assignment 4| Product Hunt" style="width: 200px; height: 44px;" width="200" height="44"/></a></h1>
+# OSSE Assignment 4[<img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=277987&theme=light" alt="OSSE Assignment 4| Product Hunt" style="width: 200px; height: 44px;" width="200" height="44"/>](https://2020mt93717.github.io)
+
 <div align="center">
 
-
-<i>This was initially setup for devops assignment. Now its used for OSSE Assignment 4</i>
+<i>This was initially setup for devops assignment. Now its used for OSSE Assignment 4</i><BR>
 
 <i>Loved the project? Please consider [donating] to help it improve!</i>
 
