@@ -1,29 +1,28 @@
 
 
-<h1 align="center">Open Source GitHub Profile README 
+<h1 align="center">OSSE Assignment 4
 <a href="https://github.com/2020mt93717/devops" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=277987&theme=light" alt="Awesome GitHub Profiles - Best curated list of developers readme, updated every 15 min | Product Hunt" style="width: 200px; height: 44px;" width="200" height="44" /></a></h1>
 <div align="center">
 
 
-<i>A curated list of Open Source Github Profile READMEs</i>
+<i>This was initially setup for devops assignment. Now its used for OSSE Assignment 4</i>
 
 
-<img alt="Open Source GitHub Profile Readme" src="assets/agpr.gif"> </img>
+<img alt="OSSE Assignment 4" src="assets/agpr.gif"> </img>
 
 <i>Loved the project? Please consider [donating] to help it improve!</i>
 
 </div>
 
 ### Contents:
-  - [Categories](#categories)
-      - [GitHub Actions 🤖](#github-actions-)
+  - [Contributors](#contributors)
     
-
-## Categories
-#### Code Mode 👨🏽‍💻
-- [Jai Kartik](https://github.com/2020mt93717)
-- [Karna P Singh](https://2020mt93650.github.io/2020mt93650/)
-- [SOMA SUNDARAM P] (2020mt93565@wilp.bits-pilani.ac.in)[https://ss-acc.github.io/]
-- [Abhinandan R] (2020mt93627@wilp.bits-pilani.ac.in)[https://abhi55521.github.io/Abhi55521]
+### Contributors 👨🏽‍💻
+|Name| Email|
+|----|-------|
+|[Jaikartik N](https://2020mt93717.github.io) | 2020mt93717@wilp.bits-pilani.ac.in |
+|[Karna P Singh](https://2020mt93650.github.io/2020mt93650/) | 2020mt93650@wilp.bits-pilani.ac.in |
+|[Soma Sundaram P](https://ss-acc.github.io/) | 2020mt93565@wilp.bits-pilani.ac.in |
+|[Abhinandan R](https://abhi55521.github.io/Abhi55521) | 2020mt93627@wilp.bits-pilani.ac.in |
 
 
