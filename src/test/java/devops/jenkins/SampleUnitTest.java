@@ -24,6 +24,7 @@ public class SampleUnitTest extends TestCase{
     }
     @Test
     public String addTestResult(){
+        System. out. println("addtestREsult");
         return null;
         
     }
